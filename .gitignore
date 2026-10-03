@@ -1,0 +1,37 @@
+# Database dumps
+*.sql
+
+# Environment / secrets
+.env
+.env.*
+
+# User uploads (keep empty folders)
+uploads/*
+!uploads/.gitkeep
+!uploads/chapters/
+uploads/chapters/*
+!uploads/chapters/.gitkeep
+
+# Unity WebGL binaries (too large for GitHub)
+unitygame/**/Build/*.data
+unitygame/**/Build/*.wasm
+unitygame/**/Build/*.br
+unitygame/**/Build/*.unityweb
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs and caches
+*.log
+*.cache
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
