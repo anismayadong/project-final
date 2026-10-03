@@ -12,11 +12,7 @@ uploads/*
 uploads/chapters/*
 !uploads/chapters/.gitkeep
 
-# Unity WebGL binaries (too large for GitHub)
-unitygame/**/Build/*.data
-unitygame/**/Build/*.wasm
-unitygame/**/Build/*.br
-unitygame/**/Build/*.unityweb
+
 
 # Dependencies
 node_modules/
