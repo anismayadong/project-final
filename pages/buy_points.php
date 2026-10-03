@@ -3,7 +3,11 @@ session_start();
 require_once '../includes/db_connect.php';
 
 if (!isset($_SESSION['user_id'])) {
+<<<<<<< HEAD
     header("Location: ../pages/Home.php");
+=======
+    header("Location: ../pages/login.php");
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
     exit;
 }
 

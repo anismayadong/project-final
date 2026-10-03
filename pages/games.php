@@ -19,6 +19,19 @@ if ($difficulty_filter !== '') {
 }
 ?>
 
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เกมทั้งหมด | ManganimeHub</title>
+    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- ลิงก์ไฟล์ CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 <main class="main-content">
     <h1 class="section-title">เกมทั้งหมด</h1>
 
@@ -68,6 +81,12 @@ if ($difficulty_filter !== '') {
     </div>
 </main>
 
+<<<<<<< HEAD
+=======
+</body>
+</html>
+
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 <?php
 // เรียกใช้ไฟล์ footer.php
 include_once '../includes/footer.php';

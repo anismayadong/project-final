@@ -32,8 +32,13 @@ if ($result->num_rows !== 1) {
 $book = $result->fetch_assoc();
 
 // ลบรูปภาพ
+<<<<<<< HEAD
 if (!empty($book['cover_image']) && file_exists(__DIR__ . "/../uploads/" . $book['cover_image'])) {
     @unlink(__DIR__ . "/../uploads/" . $book['cover_image']);
+=======
+if (!empty($book['cover_image']) && file_exists(__DIR__ . "../uploads/" . $book['cover_image'])) {
+    @unlink(__DIR__ . "../uploads/" . $book['cover_image']);
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 }
 
 // ลบจากฐานข้อมูล

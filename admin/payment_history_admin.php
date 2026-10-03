@@ -2,11 +2,16 @@
 session_start();
 require_once '../includes/db_connect.php';
 
+<<<<<<< HEAD
 // ตรวจสอบสิทธิ์ผู้ดูแลระบบ
 if (!isset($_SESSION["role_type"]) || $_SESSION["role_type"] !== "admin") {
     header("Location: ../admin/admin_login.php");
     exit;
 }
+=======
+// ตรวจสอบสิทธิ์แอดมิน (หากมีระบบ login แอดมินอยู่แล้ว)
+// if (!isset($_SESSION['is_admin'])) { header("Location: admin_login.php"); exit; }
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 
 $sql = "SELECT p.*, u.username 
         FROM payments p 

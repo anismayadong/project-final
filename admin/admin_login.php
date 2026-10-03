@@ -27,7 +27,11 @@ unset($_SESSION["login_error"]);
 
             <button type="submit">เข้าสู่ระบบแอดมิน</button>
         </form>
+<<<<<<< HEAD
         <p><a href="../pages/Home.php">กลับไปหน้าผู้ใช้ทั่วไป</a></p>
+=======
+        <p><a href="../includes/Home.php">กลับไปหน้าผู้ใช้ทั่วไป</a></p>
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
     </div>
 </body>
 </html>

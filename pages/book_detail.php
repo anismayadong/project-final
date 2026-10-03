@@ -9,6 +9,7 @@ $book_id = isset($_GET['book_id']) ? intval($_GET['book_id']) : 0;
 // 🔹 ใช้ค่าจาก config แทนการเขียนคงที่
 $unlock_cost = $UNLOCK_COST;
 
+<<<<<<< HEAD
 if ($book_id <= 0) {
     echo "<main class='book-detail' style='padding:50px 20px; text-align:center;'>";
     echo "<h2>⚠️ ข้อมูลหนังสือไม่ถูกต้อง</h2>";
@@ -39,6 +40,24 @@ if (!$book) {
     echo "</main>";
     include_once '../includes/footer.php';
     exit;
+=======
+if ($book_id > 0) {
+    // เพิ่ม views ทีละ 1
+    $conn->query("UPDATE books SET views = views + 1 WHERE book_id = $book_id");
+
+    // ดึงข้อมูลหนังสือ
+    $sql = "SELECT b.*, a.full_name AS author FROM books b 
+            LEFT JOIN authors a ON b.author_id = a.author_id 
+            WHERE b.book_id = $book_id";
+    $result = $conn->query($sql);
+    if ($result && $result->num_rows > 0) {
+        $book = $result->fetch_assoc();
+    } else {
+        echo "ไม่พบหนังสือ";
+    }
+} else {
+    echo "ข้อมูลหนังสือไม่ถูกต้อง";
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 }
 
 // ดึงตอนที่ user เคยปลดล็อกไว้

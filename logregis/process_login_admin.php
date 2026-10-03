@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
 
+<<<<<<< HEAD
         $passwordMatches = password_verify($password, $user['password']);
         if (!$passwordMatches && $password === trim($user['password'])) {
             $newHash = password_hash($password, PASSWORD_DEFAULT);
@@ -31,6 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($passwordMatches) {
+=======
+        if (password_verify($password, $user['password'])) {
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
             $_SESSION["role_type"] = $user["role_type"];

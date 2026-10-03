@@ -48,11 +48,18 @@ if (isset($_SESSION["user_id"])) {
                 <a href="../pages/Home.php"><h1 >MangAnime Hub</h1></a>
             </div>
             <div class="nav-links">
+<<<<<<< HEAD
                 <?php $current_page = basename($_SERVER['PHP_SELF']); ?>
                 <a href="../pages/Home.php" <?php echo ($current_page === 'Home.php') ? 'class="active"' : ''; ?>>หน้าหลัก</a>
                 <a href="../pages/manga.php" <?php echo ($current_page === 'manga.php') ? 'class="active"' : ''; ?>>มังงะ</a>
                 <a href="../pages/games.php" <?php echo ($current_page === 'games.php') ? 'class="active"' : ''; ?>>เกม</a>
                 <a href="../pages/ranking.php" <?php echo ($current_page === 'ranking.php') ? 'class="active"' : ''; ?>>อันดับ</a>
+=======
+                <a href="../pages/Home.php" <?php echo (basename($_SERVER['PHP_SELF']) == '../pages/Home.php') ? 'class="active"' : ''; ?>>หน้าหลัก</a>
+                <a href="../pages/manga.php" <?php echo (basename($_SERVER['PHP_SELF']) == '../pages/manga.php') ? 'class="active"' : ''; ?>>มังงะ</a>
+                <a href="../pages/games.php" <?php echo (basename($_SERVER['PHP_SELF']) == '../pages/games.php') ? 'class="active"' : ''; ?>>เกม</a>
+                <a href="../pages/ranking.php" <?php echo (basename($_SERVER['PHP_SELF']) == '..pages/ranking.php') ? 'class="active"' : ''; ?>>อันดับ</a>
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
             </div>
             <div class="user-controls">
                 <div class="search-bar">

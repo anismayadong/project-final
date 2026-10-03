@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && $result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
+<<<<<<< HEAD
         $passwordMatches = password_verify($password, $user['password']);
         if (!$passwordMatches && $password === trim($user['password'])) {
             $newHash = password_hash($password, PASSWORD_DEFAULT);
@@ -34,12 +35,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $userPoints = ($pt_row = $pt_res->fetch_assoc()) ? intval($pt_row['points']) : 0;
             $pt_stmt->close();
 
+=======
+        if (password_verify($password, $user['password'])) {
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
             $_SESSION["user_id"] = $user["user_id"];
             $_SESSION["username"] = $user["username"];
             $_SESSION["full_name"] = $user["full_name"];
             $_SESSION["phone_number"] = $user["phone_number"];
             $_SESSION["email"] = $user["email"];
+<<<<<<< HEAD
             $_SESSION["points"] = $userPoints;
+=======
+            $_SESSION["points"] = $user["points"];
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
             $_SESSION["role_type"] = $user["role_type"]; // เพิ่ม role_type ลง session
 
             // ตรวจสอบว่าเป็นแอดมินหรือไม่

@@ -2,11 +2,16 @@
 session_start();
 require_once '../includes/db_connect.php';
 
+<<<<<<< HEAD
 // ตรวจสอบสิทธิ์ผู้ดูแลระบบ
 if (!isset($_SESSION["role_type"]) || $_SESSION["role_type"] !== "admin") {
     header("Location: ../admin/admin_login.php");
     exit;
 }
+=======
+// สมมุติว่ามีระบบ login แอดมินแล้ว
+// if (!isset($_SESSION['is_admin'])) { header("Location: admin_login.php"); exit; }
+>>>>>>> c741e256a0c1ebb368512bbb7360e64e5260d250
 
 // ✅ เมื่อแอดมินกดยืนยัน
 if (isset($_GET['approve'])) {
